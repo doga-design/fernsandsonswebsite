@@ -8,12 +8,35 @@
   <link rel="icon" type="image/png" href="./img/favicon.svg" />
 
   <!-- Local custom font: Awesome Serif -->
-  <!-- Replace URL with your real font file -->
   <style>
     @font-face {
       font-family: "Awesome Serif";
-      src: url("fonts/AwesomeSerif.woff2") format("woff2");
+      src: url("./fonts/awesome_font/AwesomeSerif-Regular.otf") format("opentype");
       font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Awesome Serif";
+      src: url("./fonts/awesome_font/AwesomeSerif-MediumExtraTall.otf") format("opentype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Awesome Serif";
+      src: url("./fonts/awesome_font/AwesomeSerif-ExtraTall.otf") format("opentype");
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Awesome Serif";
+      src: url("./fonts/awesome_font/AwesomeSerif-BoldExtraTall.otf") format("opentype");
+      font-weight: 700;
       font-style: normal;
       font-display: swap;
     }
@@ -138,7 +161,7 @@
       }
 
       .announcement-track {
-        padding-inline: var(--space-md);
+        padding-inline: var(--space-lg);
         gap: 3rem;
       }
     }
@@ -158,7 +181,7 @@
 
     @media (max-width: 768px) {
       .container {
-        padding-inline: var(--space-md);
+        padding-inline: var(--space-lg);
       }
     }
 
@@ -272,6 +295,12 @@
       overflow: visible;
     }
 
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 10px;
+      }
+    }
+
     .hero-inner {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
@@ -310,6 +339,12 @@
       font-weight: 200;
       line-height: 1.1;
       margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.75em;
+      }
     }
 
     .hero-body {
@@ -929,9 +964,6 @@
         100% 0;
       
       background-repeat: no-repeat;
-      
-      /* Rounded dash effect using filter */
-      filter: blur(0.3px);
     }
 
     /* Desktop-only hover: grow box and animate dashes */
